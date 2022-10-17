@@ -9,6 +9,4 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "object.json", true);
 xhttp.send();
 
-//Denna kod är det som tillåter dig att arbeta med det som ligger i JSON filen.
-//Alla funktioner som arbetar med de värden bör behöver ligga innuti scopet av if loopen.
-//Ceasarsalladen har två priser. En för en hel portion och en för en halv. Bra att komma ihåg vid sortering via pris.
+//Denna kod kommer användas för att generera sidan utifrån de måltider som finns i JSON filen.
