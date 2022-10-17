@@ -1,0 +1,69 @@
+{
+    "meals":[
+        {
+            "name":"Fläskplanka",
+            "price":149,
+            "alergies": ["gluten", "lactose"],
+            "meatType":"pork",
+            "description":"Duchesse mos, rödvinssky, bearnaise och stekta grönsaker"
+        },
+        {
+            "name":"Biff Rydberg",
+            "price":175,
+            "alergies":["gluten", "egg"],
+            "meatType":"beef",
+            "description":"Duchesse mos, rödvinssky, bearnaise och stekta grönsaker"
+        },
+        {
+            "name":"Spicy Cheeseburger",
+            "price":155,
+            "alergies":["gluten", "lactose"],
+            "meatType":"beef",
+            "description":"180gram högrevsburgare med sallad, tomat, picklad rödlök, cheddarost med jalapeños och barbecuesås i briochebröd med pommes rökig ranch-aioli"
+        },
+        {
+            "name":"Halloumy Burgare",
+            "price":155,
+            "alergies":["gluten", "lactose"],
+            "meatType":"vegetarian",
+            "description":"Sallad, tomat, rödlök och guacamole i briochebröd med pommes och aioli"
+        },
+        {
+            "name":"Fish'n Chips",
+            "price":149,
+            "alergies":["gluten", "lactose"],
+            "meatType":"fish/seafood",
+            "description":"Beer-batter panerad torskrygg med dill-aioli, halstrad citron och pommes"
+        },
+        {
+            "name":"Husets Schnitzel",
+            "price":175,
+            "alergies":["lactose"],
+            "meatType":"pork",
+            "description":"200 gram välbankad schnitzel ”Borås största” med citron, kapris, anjovis, kryddsmör och rödvinssky serveras med stekt potatis"
+        },
+        {
+            "name":"Ceasarsallad",
+            "price":[139, 85],
+            "alergies":["gluten", "lactose"],
+            "meatType":"chicken",
+            "description":"Varm kyckling, bacon, krutonger, parmesan samt caesardressing"
+        },
+        {
+            "name":"Laxsallad med quinoa",
+            "price":159,
+            "alergies":["seafood"],
+            "meatType":"fish/seafood",
+            "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli."
+        },
+        {
+            "name":"Grilld oxfilé",
+            "price":259,
+            "alergies":["lactose"],
+            "meatType":"beef",
+            "description":"200 gram oxfilé, rödvinssås, frästa grönsaker serveras med potatisgratäng(går att få med pommes och bearnaise) "
+        }
+    
+    
+    ]
+    }
