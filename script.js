@@ -2,7 +2,8 @@
 const menuDiv = document.querySelector("#menu-container");
 
 
-function generalCall(){
+
+window.onload = function generalCall(){
 
     menuDiv.replaceChildren();
     
@@ -26,139 +27,202 @@ function generalCall(){
 
 }
 
+let filterGlutenActive = true;
 function filterGluten(){
 
-    menuDiv.replaceChildren();
+    if (filterGlutenActive === true) {
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'object.json')
-    xhttp.onload = function(){
+        menuDiv.replaceChildren();
 
-        var menu = JSON.parse(xhttp.responseText);
-        var meals = menu.meals;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
 
-        meals.forEach((meal) => {
+            var menu = JSON.parse(xhttp.responseText);
+            var meals = menu.meals;
 
-            if (!(meal.alergies.includes('gluten'))) {
-        
-                const mealDiv = document.createElement("div");
-                menuDiv.appendChild(mealDiv);
-                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                
-            }
+            meals.forEach((meal) => {
+
+                if (!(meal.alergies.includes('gluten'))) {
             
-        })
+                    const mealDiv = document.createElement("div");
+                    menuDiv.appendChild(mealDiv);
+                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                    
+                }
+                
+            })
+
+        }
+        xhttp.send();
+                
+        filterGlutenActive = false;
+    }
+    else {
+
+        generalCall();
+        filterGlutenActive = true;
 
     }
-    xhttp.send();
 
 }
 
+let filterLactoseActive = true;
 function filterLactose(){
 
-    menuDiv.replaceChildren();
+    if (filterLactoseActive === true) {
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'object.json')
-    xhttp.onload = function(){
+        menuDiv.replaceChildren();
 
-        var menu = JSON.parse(xhttp.responseText);
-        var meals = menu.meals;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
 
-        meals.forEach((meal) => {
+            var menu = JSON.parse(xhttp.responseText);
+            var meals = menu.meals;
 
-            if (!(meal.alergies.includes('lactose'))) {
-        
-                const mealDiv = document.createElement("div");
-                menuDiv.appendChild(mealDiv);
-                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                
-            }
+            meals.forEach((meal) => {
+
+                if (!(meal.alergies.includes('lactose'))) {
             
-        })
+                    const mealDiv = document.createElement("div");
+                    menuDiv.appendChild(mealDiv);
+                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                    
+                }
+                
+            })
+
+        }
+        xhttp.send();
+                
+        filterLactoseActive = false;
+    }
+    else {
+
+        generalCall();
+        filterLactoseActive = true;
 
     }
-    xhttp.send();
 
 }
 
+let filterSeafoodActive = true;
 function filterSeafood(){
 
-    menuDiv.replaceChildren();
+    if (filterSeafoodActive === true) {
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'object.json')
-    xhttp.onload = function(){
+        menuDiv.replaceChildren();
 
-        var menu = JSON.parse(xhttp.responseText);
-        var meals = menu.meals;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
 
-        meals.forEach((meal) => {
+            var menu = JSON.parse(xhttp.responseText);
+            var meals = menu.meals;
 
-            if (!(meal.alergies.includes('seafood'))) {
-        
-                const mealDiv = document.createElement("div");
-                menuDiv.appendChild(mealDiv);
-                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                
-            }
+            meals.forEach((meal) => {
+
+                if (!(meal.alergies.includes('seafood'))) {
             
-        })
+                    const mealDiv = document.createElement("div");
+                    menuDiv.appendChild(mealDiv);
+                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                    
+                }
+                
+            })
+
+        }
+        xhttp.send();
+        
+        filterSeafoodActive = false;
+    }
+    else {
+
+        generalCall();
+        filterSeafoodActive = true;
 
     }
-    xhttp.send();
+
 }
 
+let filterEggsActive = true;
 function filterEggs(){
 
-    menuDiv.replaceChildren();
+    if (filterEggsActive === true) {
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'object.json')
-    xhttp.onload = function(){
+        menuDiv.replaceChildren();
 
-        var menu = JSON.parse(xhttp.responseText);
-        var meals = menu.meals;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
 
-        meals.forEach((meal) => {
+            var menu = JSON.parse(xhttp.responseText);
+            var meals = menu.meals;
 
-            if (!(meal.alergies.includes('eggs'))) {
-        
-                const mealDiv = document.createElement("div");
-                menuDiv.appendChild(mealDiv);
-                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                
-            }
+            meals.forEach((meal) => {
+
+                if (!(meal.alergies.includes('eggs'))) {
             
-        })
+                    const mealDiv = document.createElement("div");
+                    menuDiv.appendChild(mealDiv);
+                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                    
+                }
+                
+            })
+
+        }
+        xhttp.send();
+
+        filterEggsActive = false;
+    }
+    else {
+
+        generalCall();
+        filterEggsActive = true;
 
     }
-    xhttp.send();
+
 }
 
+let filterMeatActive = true;
 function filterMeat(){
+    
+    if (filterMeatActive === true) {
 
-    menuDiv.replaceChildren();
+        menuDiv.replaceChildren();
 
-    var xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'object.json')
-    xhttp.onload = function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
 
-        var menu = JSON.parse(xhttp.responseText);
-        var meals = menu.meals;
+            var menu = JSON.parse(xhttp.responseText);
+            var meals = menu.meals;
 
-        meals.forEach((meal) => {
+            meals.forEach((meal) => {
 
-            if (meal.meatType === 'vegetarian') {
-        
-                const mealDiv = document.createElement("div");
-                menuDiv.appendChild(mealDiv);
-                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                
-            }
+                if (meal.meatType === 'vegetarian') {
             
-        })
+                    const mealDiv = document.createElement("div");
+                    menuDiv.appendChild(mealDiv);
+                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                    
+                }
+                
+            })
+
+        }
+        xhttp.send();
+
+        filterMeatActive = false;
+    }
+    else {
+
+        generalCall();
+        filterMeatActive = true;
 
     }
-    xhttp.send();
+
 }

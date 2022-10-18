@@ -54,7 +54,21 @@
             "price":159,
             "alergies":["seafood"],
             "meatType":"fish/seafood",
-            "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli."
+            "description":"Grillad lax med quinoa, cocktailtomater, blandsallad, morot julienne, rödlök med en vinägrett"
+        },
+        {
+            "name":"Krämig kycklingpasta",
+            "price":169,
+            "alergies":["lactose"],
+            "meatType":"chicken",
+            "description":"Soltorkade tomater, basilika, grönsaker och parmesan"
+        },
+        {
+            "name":"Musslor àl cava",
+            "price":[189, 109],
+            "alergies":["lactose", "seafood"],
+            "meatType":"fish/seafood",
+            "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli"
         },
         {
             "name":"Grillad oxfilé",
