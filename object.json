@@ -10,9 +10,9 @@
         {
             "name":"Biff Rydberg",
             "price":175,
-            "alergies":["gluten", "egg"],
+            "alergies":["gluten", "eggs"],
             "meatType":"beef",
-            "description":"Duchesse mos, rödvinssky, bearnaise och stekta grönsaker"
+            "description":"Tärnad oxfilé, potatis och gullök, serveras med dijonsenapskräm och rå äggula"
         },
         {
             "name":"Spicy Cheeseburger",
@@ -31,7 +31,7 @@
         {
             "name":"Fish'n Chips",
             "price":149,
-            "alergies":["gluten", "lactose"],
+            "alergies":["gluten", "lactose", "seafood"],
             "meatType":"fish/seafood",
             "description":"Beer-batter panerad torskrygg med dill-aioli, halstrad citron och pommes"
         },
@@ -57,7 +57,7 @@
             "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli."
         },
         {
-            "name":"Grilld oxfilé",
+            "name":"Grillad oxfilé",
             "price":259,
             "alergies":["lactose"],
             "meatType":"beef",

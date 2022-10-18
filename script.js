@@ -1,108 +1,164 @@
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var menu = JSON.parse(xhttp.responseText);
-       //console.log(menu.meals); //Loggar objekten som ligger is object.json
-       var meals = menu.meals; //För att enkelt nå menyn genom meals.objekt
 
-       function generalCall () {
+const menuDiv = document.querySelector("#menu-container");
+
+
+function generalCall(){
+
+    menuDiv.replaceChildren();
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            const mealDiv = document.createElement("div");
+            menuDiv.appendChild(mealDiv);
+            mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
             
-            meals.forEach((meal) => {
-                
-                const menuDiv = document.querySelector("#menu-container");
+        })
+
+    }
+    xhttp.send();
+
+}
+
+function filterGluten(){
+
+    menuDiv.replaceChildren();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            if (!(meal.alergies.includes('gluten'))) {
+        
                 const mealDiv = document.createElement("div");
                 menuDiv.appendChild(mealDiv);
                 mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
                 
-            })
+            }
+            
+        })
 
-        }
-       //GeneralCall () <---------------------------------- CALL THIS FUNCTION
-       function filterGluten () {
-
-            meals.forEach((meal) => {
-                    
-                if (!(meal.alergies.includes('gluten'))) {
-                    console.log(meal);
-                    const menuDiv = document.querySelector("#menu-container");
-                    const mealDiv = document.createElement("div");
-                    menuDiv.appendChild(mealDiv);
-                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                }
-
-            })
-        
-        }
-        //filterGluten () <---------------------------------- CALL THIS FUNCTION
-        function filterLactose () {
-
-            meals.forEach((meal) => {
-                    
-                if (!(meal.alergies.includes('lactose'))) {
-                    console.log(meal);
-                    const menuDiv = document.querySelector("#menu-container");
-                    const mealDiv = document.createElement("div");
-                    menuDiv.appendChild(mealDiv);
-                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                }
-
-            })
-        
-        }
-        //filterLactose () <---------------------------------- CALL THIS FUNCTION
-        function filterSeafood () {
-
-            meals.forEach((meal) => {
-                    
-                if (!(meal.alergies.includes('seafood'))) {
-                    console.log(meal);
-                    const menuDiv = document.querySelector("#menu-container");
-                    const mealDiv = document.createElement("div");
-                    menuDiv.appendChild(mealDiv);
-                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                }
-
-            })
-        
-        }
-        //filterSeafood () <---------------------------------- CALL THIS FUNCTION 
-        function filterEggs () {
-
-            meals.forEach((meal) => {
-                    
-                if (!(meal.alergies.includes('egg'))) {
-                    console.log(meal);
-                    const menuDiv = document.querySelector("#menu-container");
-                    const mealDiv = document.createElement("div");
-                    menuDiv.appendChild(mealDiv);
-                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                }
-
-            })
-        
-        }
-        //filterEggs () <---------------------------------- CALL THIS FUNCTION 
-        function filterMeat () {
-
-            meals.forEach((meal) => {
-                    
-                if (meal.meatType === 'vegetarian') {
-                    console.log(meal);
-                    const menuDiv = document.querySelector("#menu-container");
-                    const mealDiv = document.createElement("div");
-                    menuDiv.appendChild(mealDiv);
-                    mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
-                }
-
-            })
-        
-        }
-        //filterMeat () <---------------------------------- CALL THIS FUNCTION 
     }
-};
-xhttp.open("GET", "object.json", true);
-xhttp.send();
+    xhttp.send();
 
-//Denna kod är det som tillåter dig att arbeta med det som ligger i JSON filen.
-//Alla funktioner som arbetar med de värden bör behöver ligga innuti scopet av if loopen.
-//Ceasarsalladen har två priser. En för en hel portion och en för en halv. Bra att komma ihåg vid sortering via pris.
+}
+
+function filterLactose(){
+
+    menuDiv.replaceChildren();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            if (!(meal.alergies.includes('lactose'))) {
+        
+                const mealDiv = document.createElement("div");
+                menuDiv.appendChild(mealDiv);
+                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                
+            }
+            
+        })
+
+    }
+    xhttp.send();
+
+}
+
+function filterSeafood(){
+
+    menuDiv.replaceChildren();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            if (!(meal.alergies.includes('seafood'))) {
+        
+                const mealDiv = document.createElement("div");
+                menuDiv.appendChild(mealDiv);
+                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                
+            }
+            
+        })
+
+    }
+    xhttp.send();
+}
+
+function filterEggs(){
+
+    menuDiv.replaceChildren();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            if (!(meal.alergies.includes('eggs'))) {
+        
+                const mealDiv = document.createElement("div");
+                menuDiv.appendChild(mealDiv);
+                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                
+            }
+            
+        })
+
+    }
+    xhttp.send();
+}
+
+function filterMeat(){
+
+    menuDiv.replaceChildren();
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('GET', 'object.json')
+    xhttp.onload = function(){
+
+        var menu = JSON.parse(xhttp.responseText);
+        var meals = menu.meals;
+
+        meals.forEach((meal) => {
+
+            if (meal.meatType === 'vegetarian') {
+        
+                const mealDiv = document.createElement("div");
+                menuDiv.appendChild(mealDiv);
+                mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
+                
+            }
+            
+        })
+
+    }
+    xhttp.send();
+}
