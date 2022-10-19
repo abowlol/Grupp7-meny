@@ -5,8 +5,8 @@ menuDiv.className = 'works';
 menuDiv.classList.add("anotherclass");
 menuDiv.classList.toggle("anotherclass");
 menuDiv.classList.replace("works", "alsoworks");
-const string = String(menuDiv.outerHTML);
-console.log(string.search('locked'));
+//const string = String(div.outerHTML);
+//console.log(string.search('locked'));
 //^^test saker^^
 
 window.onload = function generalCall(){
@@ -38,7 +38,7 @@ let OnOffSwitchForGluten = false;
 function filterGluten(){
 
     const glutenDivs = document.querySelectorAll('.gluten');
-    console.log(glutenDivs);
+    //console.log(glutenDivs);
 
 
     if (OnOffSwitchForGluten === false) {
@@ -46,7 +46,9 @@ function filterGluten(){
         glutenDivs.forEach((div) => {
 
             div.classList.toggle("glutenlocked");
+            console.log(div);
             div.style.display = "none";
+            //console.log(div);
 
         })
 
@@ -55,10 +57,14 @@ function filterGluten(){
     else {
 
         glutenDivs.forEach((div) => {
-            console.log(div);//later: functionName(div);
+            
+            //numbers
             div.classList.toggle("glutenlocked");
+            //-1
+            console.log(div);
+            checkIfLockedAndReturnDisplay(div);
             //if locked is found in any of the "div":s, keep display:none; else, display:block
-            div.style.display = "block";
+            //returnDisplay(div);
             
         })
 
@@ -66,6 +72,20 @@ function filterGluten(){
 
     }
 
+}
+
+function checkIfLockedAndReturnDisplay (div){
+
+    /*Look inside this div. Is there a substring called "locked" in it? If there isn't
+    such a substring, you'll return -1, meaning it's not locked--meaning it's free
+    to appear (display:block).*/
+
+            const string = String(div.outerHTML);
+            const locked = string.search('locked');
+
+            if (locked === -1){
+    return div.style.display = "block"}
+    
 }
 
 let OnOffSwitchForLactose = false;
@@ -78,7 +98,9 @@ function filterLactose(){
 
         lactoseDivs.forEach((div) => {
 
-            div.remove();
+            div.classList.toggle("lactoselocked");
+            div.style.display = "none";
+            console.log(div);
             
         })
 
@@ -88,11 +110,47 @@ function filterLactose(){
 
         lactoseDivs.forEach((div) => {
 
-            div.style.display = "block";
+            div.classList.toggle("lactoselocked");
+            console.log(div);
+            checkIfLockedAndReturnDisplay(div);
             
         })
 
         OnOffSwitchForLactose = false;
+
+    }
+
+}
+
+let OnOffSwitchForSeafood = false;
+function filterSeafood(){
+
+    const seafoodDivs = document.querySelectorAll('.seafood');
+
+
+    if (OnOffSwitchForSeafood === false) {
+
+        seafoodDivs.forEach((div) => {
+
+            div.classList.toggle("seafoodlocked");
+            div.style.display = "none";
+            console.log(div);
+            
+        })
+
+        OnOffSwitchForSeafood = true;
+    }
+    else {
+
+        seafoodDivs.forEach((div) => {
+
+            div.classList.toggle("seafoodlocked");
+            console.log(div);
+            checkIfLockedAndReturnDisplay(div);
+            
+        })
+
+        OnOffSwitchForSeafood = false;
 
     }
 
