@@ -64,15 +64,15 @@
             "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli."
         },
         {
-            "name":"Musslor àl cava",
-            "price":[189, 109],
+            "name":"Musslor àl cava (Hel Portion)",
+            "price":189,
             "alergies":["lactose", "seafood"],
             "meatType":"fish/seafood",
             "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli"
         },
         {
-            "name":"Musslor àl cava",
-            "price":[189, 109],
+            "name":"Musslor àl cava(Halv Portion)",
+            "price":109,
             "alergies":["lactose", "seafood"],
             "meatType":"fish/seafood",
             "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli"
