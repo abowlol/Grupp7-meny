@@ -1,7 +1,13 @@
 
 const menuDiv = document.querySelector("#menu-container");
-
-
+//vvtest sakervv
+menuDiv.className = 'works';
+menuDiv.classList.add("anotherclass");
+menuDiv.classList.toggle("anotherclass");
+menuDiv.classList.replace("works", "alsoworks");
+const string = String(menuDiv.outerHTML);
+console.log(string.search('locked'));
+//^^test saker^^
 
 window.onload = function generalCall(){
 
@@ -17,6 +23,7 @@ window.onload = function generalCall(){
         meals.forEach((meal) => {
 
             const mealDiv = document.createElement("div");
+            mealDiv.classList.add(meal.alergies[0],meal.alergies[1], meal.meatType);
             menuDiv.appendChild(mealDiv);
             mealDiv.innerHTML = meal.name + ' ' + meal.price + "kr" + '<br>' + meal.description;
             
@@ -27,7 +34,71 @@ window.onload = function generalCall(){
 
 }
 
-let filterGlutenActive = true;
+let OnOffSwitchForGluten = false;
+function filterGluten(){
+
+    const glutenDivs = document.querySelectorAll('.gluten');
+    console.log(glutenDivs);
+
+
+    if (OnOffSwitchForGluten === false) {
+
+        glutenDivs.forEach((div) => {
+
+            div.classList.toggle("glutenlocked");
+            div.style.display = "none";
+
+        })
+
+        OnOffSwitchForGluten = true;
+    }
+    else {
+
+        glutenDivs.forEach((div) => {
+            console.log(div);//later: functionName(div);
+            div.classList.toggle("glutenlocked");
+            //if locked is found in any of the "div":s, keep display:none; else, display:block
+            div.style.display = "block";
+            
+        })
+
+        OnOffSwitchForGluten = false;
+
+    }
+
+}
+
+let OnOffSwitchForLactose = false;
+function filterLactose(){
+
+    const lactoseDivs = document.querySelectorAll('.lactose');
+
+
+    if (OnOffSwitchForLactose === false) {
+
+        lactoseDivs.forEach((div) => {
+
+            div.remove();
+            
+        })
+
+        OnOffSwitchForLactose = true;
+    }
+    else {
+
+        lactoseDivs.forEach((div) => {
+
+            div.style.display = "block";
+            
+        })
+
+        OnOffSwitchForLactose = false;
+
+    }
+
+}
+
+/*let filterGlutenActive = true;
 function filterGluten(){
 
     if (filterGlutenActive === true) {
@@ -225,4 +296,4 @@ function filterMeat(){
 
     }
 
-}
+}*/
