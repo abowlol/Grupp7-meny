@@ -64,9 +64,6 @@ function SortDescending(){
 
         function printMenu(menu)
         {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open('GET', 'object.json')
-        xhttp.onload = function(){
                     
             for(var i = 0; i < menu.length; i++)
             {
@@ -74,9 +71,7 @@ function SortDescending(){
                 var menuContainer = document.getElementById("menu-container");
                 var mealCard = document.createElement("div");
                 mealCard.classList.add("mealCard");
-                mealCard.classList.add(menu[i].alergies[0],menu[i].alergies[1], menu[i].meatType);
                 menuContainer.appendChild(mealCard);
-
                 mealCard.innerHTML = 
                 `
                 <h3 id="mealCardTitle">${menu[i].name}</h3></br>
@@ -85,7 +80,5 @@ function SortDescending(){
                 `;
 
             }
-        }
-        xhttp.send();
     }
 

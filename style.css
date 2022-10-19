@@ -1,0 +1,9 @@
+.mealCard{
+    margin:20px;
+    margin-top: 50px;
+    border: solid black 3px;    
+}
+
+.mealCardTitle{
+    margin:0;
+}

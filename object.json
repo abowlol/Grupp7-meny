@@ -43,8 +43,15 @@
             "description":"200 gram välbankad schnitzel ”Borås största” med citron, kapris, anjovis, kryddsmör och rödvinssky serveras med stekt potatis"
         },
         {
-            "name":"Ceasarsallad",
-            "price":[139, 85],
+            "name":"Ceasarsallad (Hel Portion)",
+            "price":139,
+            "alergies":["gluten", "lactose"],
+            "meatType":"chicken",
+            "description":"Varm kyckling, bacon, krutonger, parmesan samt caesardressing"
+        },
+        {
+            "name":"Ceasarsallad (Halv Portion)",
+            "price":85,
             "alergies":["gluten", "lactose"],
             "meatType":"chicken",
             "description":"Varm kyckling, bacon, krutonger, parmesan samt caesardressing"
@@ -57,7 +64,21 @@
             "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli."
         },
         {
-            "name":"Grilld oxfilé",
+            "name":"Musslor àl cava",
+            "price":[189, 109],
+            "alergies":["lactose", "seafood"],
+            "meatType":"fish/seafood",
+            "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli"
+        },
+        {
+            "name":"Musslor àl cava",
+            "price":[189, 109],
+            "alergies":["lactose", "seafood"],
+            "meatType":"fish/seafood",
+            "description":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraiche och jalapeños, serveras med pommes och aioli"
+        },
+        {
+            "name":"Grillad oxfilé",
             "price":259,
             "alergies":["lactose"],
             "meatType":"beef",

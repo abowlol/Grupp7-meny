@@ -8,9 +8,15 @@
     <title>Lucky Duck!</title>
 </head>
 <body>
-    <div id="menu-container">
-        
-    </div>
+    <input type="button" value="Sortera Stigande" onclick="SortAscending()">
+    <input type="button" value="Sortera Fallande" onclick="SortDescending()">
+    <button onclick="filterGluten()">Gluten</button>
+    <button onclick="filterLactose()">Lactose</button>
+    <button onclick="filterSeafood()">Seafood</button>
+    <button onclick="filterEggs()">Eggs</button>
+    <button onclick="filterMeat()">Vegetarian</button>
+     <div id="menu-container"></div> <!--Denna div representerar vart själva menyn ligger -->
     <script src="script.js"></script>
+    <script src="simonScript.js"></script>
 </body>
 </html>
