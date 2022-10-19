@@ -75,9 +75,20 @@ function SortDescending(){
 
                 mealCard.innerHTML = 
                 `
-                <h3 id="mealCardTitle">${menu[i].name}</h3></br>
-                    ${menu[i].price}kr</br>
-                <i>${menu[i].description}</i>
+                <div class="card mb-3" style="max-width: 100%;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="${menu[i].image}" class="card-img" alt="${menu[i].name}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">${menu[i].name}</h5>
+                      <p class="card-text">${menu[i].description}</p>
+                      <p class="card-text">${menu[i].price} kr</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
                 `;
 
             }
