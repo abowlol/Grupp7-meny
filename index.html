@@ -8,59 +8,72 @@
     <title>Lucky Duck!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div id="menu-container">
         
     </div>
 
-
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#top"><img src="lucky_duck.png" width="40" height="40" class="d-inline-block align-top" alt="">
-            Lucky Duck</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Priser
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Högsta till lägsta</a></li>
-                  <li><a class="dropdown-item" href="#">Lägsta till högsta</a></li>
-                </ul>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Allergier
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Nötter</a></li>
-                      <li><a class="dropdown-item" href="#">Mjölk/laktos</a></li>
-                      <li><a class="dropdown-item" href="#">Fisk/skaldjur</a></li>
-                      <li><a class="dropdown-item" href="#">Ägg</a></li>
-                      <li><a class="dropdown-item" href="#">Gluten</a></li> 
-                    </ul>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Val av protein
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Vegetariskt</a></li>
-                          <li><a class="dropdown-item" href="#">Kyckling</a></li>
-                          <li><a class="dropdown-item" href="#">Fisk/skaldjur</a></li>
-                          <li><a class="dropdown-item" href="#">Fläsk</a></li>
-                          <li><a class="dropdown-item" href="#">Nötkött</a></li>
-                        </ul>
-              </li>
-            </ul>
-          </div>
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#top"><img src="lucky_duck.png" width="40" height="40" class="d-inline-block align-top" alt="">
+          Lucky Duck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link active" href="#index.html">Meny</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="info.html">Om oss</a>
+            </li>
+          </ul>
         </div>
       </nav>
+
 <br />
 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col">
+      <form>
+        <select class="allergiform">
+          <option value="" >Allergi</option>
+          <option value="1">Nötter</option>
+          <option value="2">Mjölk/laktos</option>
+          <option value="3">Fisk/skaldjur</option>
+          <option value="4">Ägg</option>
+          <option value="5">Gluten</option>
+        </select>
+      </form>
+    </div>
+    <div class="col">
+      <form>
+        <select class="proteinform" required aria-label="Default select example">
+          <option value="">Typ av protein</option>
+          <option value="1" onclick="ismail">Kyckling</option>
+          <option value="2">Fläsk</option>
+          <option value="3">Fisk/skaldjur</option>
+          <option value="4">Nötkött</option>
+          <option value="5">Vegetariskt</option>
+        </select>
+      </form>
+    </div>
+    <div class="col">
+      <form>
+        <select class="prisfilter" required aria-label="Default select example">
+          <option value="">Pris</option>
+          <option value="1">Högsta till lägsta</option>
+          <option value="2">Lägsta till högsta</option>
+        </select>
+      </form>
+    </div>
+  </div>
+<br />
+
+</div>
     <div class="container-fluid">
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">

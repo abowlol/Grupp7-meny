@@ -2,6 +2,7 @@ body{
     background-color: orange;
 }
 
+
 .mb-3{
     background-color: lightblue;
 }
@@ -19,7 +20,28 @@ body{
     height: 15vw;
     object-fit: cover;
 }
+
 .navbarimg{
     width:30;
     height:30;
+}
+
+.infotext{
+    padding: 50px;
+    text-align: center;
+}
+h1{
+    padding: 50px;
+    text-align: center;
+}
+
+.container-fluid{
+    justify-content: center;
+    padding: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
