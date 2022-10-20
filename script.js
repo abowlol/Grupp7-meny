@@ -17,7 +17,7 @@ xhttp.send();
 // Created by @conmarap.*/
 
 
-//allergier
+/*allergier
 checkBox = document.getElementById('Laktos').addEventListener('click', event => {
 	if(event.target.checked) {
 		alert("Checkbox checked!");
@@ -93,3 +93,22 @@ checkBox = document.getElementById('hightolow').addEventListener('click', event 
 		alert("Checkbox checked!");
 	}
 });
+*/ 
+
+
+var checkboxes = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
+let checked = []
+
+
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    checked = 
+      Array.from(checkboxes) 
+      .filter(i => i.checked)  
+      .map(i => i.value) 
+      
+    console.log("Dessa är ikryssade: ", checked)
+  })
+});
+
+
