@@ -23,7 +23,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link active" href="#index.html">Meny</a>
             </li>
             <li class="nav-item">
@@ -38,42 +38,109 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col">
-      <form>
-        <select class="allergiform">
-          <option value="" >Allergi</option>
-          <option value="1">Nötter</option>
-          <option value="2">Mjölk/laktos</option>
-          <option value="3">Fisk/skaldjur</option>
-          <option value="4">Ägg</option>
-          <option value="5">Gluten</option>
-        </select>
-      </form>
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          Allergier
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+           <li>
+            <input class="form-check-input" type="checkbox" value="" id="Laktos">
+            <label class="form-check-label" for="Laktos">
+              Mjölk/laktos
+            </label>
+          </li>
+          <li>
+            <input class="form-check-input" type="checkbox" value="" id="Egg">
+            <label class="form-check-label" for="Egg">
+              Ägg
+            </label>
+          </li>
+          <li>
+            <input class="form-check-input" type="checkbox" value="" id="Gluten">
+            <label class="form-check-label" for="Gluten">
+                Gluten
+            </label>
+          </li>
+          <li>
+            <input class="form-check-input" type="checkbox" value="" id="Skaldjur">
+            <label class="form-check-label" for="Skaldjur">
+                  Fisk/skaldjur
+            </label>
+          </li>
+          <li>
+            <input class="form-check-input" type="checkbox" value="" id="Notter">
+            <label class="form-check-label" for="Notter">
+                    Nötter
+            </label>
+          </li>
+        </ul>
+      </div>
+
+
+
+  <div class="col">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Val av protein
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+         <li>
+          <input class="form-check-input" type="checkbox" value="" id="Vegetariskt">
+          <label class="form-check-label" for="Vegetariskt">
+            Vegetariskt
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="checkbox" value="" id="Kyckling">
+          <label class="form-check-label" for="Kyckling">
+            Kyckling
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="checkbox" value="" id="Fisk">
+          <label class="form-check-label" for="Fisk">
+            Fisk/skaldjur
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="checkbox" value="" id="Beef">
+          <label class="form-check-label" for="Beef">
+            Nötkött
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="checkbox" value="" id="Pork">
+          <label class="form-check-label" for="Pork">
+            Fläsk
+          </label>
+        </li>
+      </ul>
     </div>
+
+
     <div class="col">
-      <form>
-        <select class="proteinform" required aria-label="Default select example">
-          <option value="">Typ av protein</option>
-          <option value="1" onclick="ismail">Kyckling</option>
-          <option value="2">Fläsk</option>
-          <option value="3">Fisk/skaldjur</option>
-          <option value="4">Nötkött</option>
-          <option value="5">Vegetariskt</option>
-        </select>
-      </form>
-    </div>
-    <div class="col">
-      <form>
-        <select class="prisfilter" required aria-label="Default select example">
-          <option value="">Pris</option>
-          <option value="1">Högsta till lägsta</option>
-          <option value="2">Lägsta till högsta</option>
-        </select>
-      </form>
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Pris
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+         <li>
+          <input class="form-check-input" type="checkbox" value="" id="lowtohigh">
+          <label class="form-check-label" for="lowtohigh">
+            Lägsta till högsta
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="checkbox" value="" id="hightolow">
+          <label class="form-check-label" for="hightolow">
+            Högsta till lägsta
+          </label>
+      </ul>
     </div>
   </div>
+</div>
+ 
 <br />
 
-</div>
+
+
     <div class="container-fluid">
         <div class="card mb-3" style="max-width: 100%;">
             <div class="row no-gutters">
