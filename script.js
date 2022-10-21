@@ -64,8 +64,8 @@ function filterGluten(){
         OnOffSwitchForGluten = false;
 
     }
-
 }
+
 
 function checkIfLockedAndReturnDisplay (div){
 
@@ -223,7 +223,7 @@ function SortDescending(){
                         <div class="card-body">
                           <h5 class="card-title">${menu[i].name}</h5>
                           <p class="card-text">${menu[i].description}</p>
-                          <p class="card-text">${menu[i].price}</p>
+                          <p class="card-text">${menu[i].price}kr</p>
                         </div>
                       </div>
                     </div>

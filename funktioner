@@ -1,0 +1,37 @@
+let OnOffSwitchForEgg = false;
+function filteregg(){
+
+    const eggDivs = document.querySelectorAll('.egg');
+    //console.log(eggDivs);
+
+
+    if (OnOffSwitchForEgg === false) {
+
+        eggDivs.forEach((div) => {
+
+            div.classList.toggle("egglocked");
+            console.log(div);
+            div.style.display = "none";
+            //console.log(div);
+
+        })
+
+        OnOffSwitchForEgg = true;
+    }
+    else {
+
+        eggDivs.forEach((div) => {
+            
+            //numbers
+            div.classList.toggle("egglocked");
+            //-1
+            console.log(div);
+            checkIfLockedAndReturnDisplay(div);
+            //if locked is found in any of the "div":s, keep display:none; else, display:block
+            //returnDisplay(div);
+            
+        })
+
+        OnOffSwitchForEgg = false;
+
+    }

@@ -14,7 +14,7 @@
 <body>
 
       <nav class="navbar navbar-expand sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#top"><img src="lucky_duck.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        <a class="navbar-brand" href="index.html"><img src="./images/lucky_duck.png" width="40" height="40" class="d-inline-block align-top" alt="">
           Lucky Duck</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -35,35 +35,55 @@
 
 <div class="container">
   <div class="row justify-content-center">
+
+    <div class="col">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="prisKnapp" value="1" id="flexRadioDefault" checked>
+        <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
+          Stigande pris
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="prisKnapp" value="2" id="flexRadioDefault">
+        <label class="form-check-label" for="flexRadioDefault2" style="color: black;">
+          Fallande pris
+        </label>
+        <button id="submit">1. Sortera</button>
+      </div>
+    </div>
+  <br />
     <div class="col">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-          Filtrera allergier
+          2. Filtrera allergier
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
            <li>
-            <label onclick="filterLactose()" class="dropdown-option" class="form-check-label" for="allergiCheck">
-              Mjölk/laktos
-            </label>
+            <label onclick="filterLactose()" class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Mjölk/laktos
+              </label>
           </li>
           <li>
-            <label onclick="" class="dropdown-option" class="form-check-label" for="flexCheckDefault">
-              Ägg
-            </label>
+            <label onclick="filterEgg()" class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Ägg
+              </label>
           </li>
           <li>
-            <label onclick="filterGluten()" class="dropdown-option" class="form-check-label" for="flexCheckDefault">
+            <label onclick="filterGluten()" class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
                 Gluten
-            </label>
+              </label>
           </li>
           <li>
-            <label onclick="filterSeafood()" class="dropdown-option" class="form-check-label" for="flexCheckDefault">
-                  Fisk/skaldjur
-            </label>
-          </li>
-          <li>
-            <label onclick="" class="dropdown-option" class="form-check-label" for="flexCheckDefault">
-                    Nötter
-            </label>
+            <label onclick="filterSeafood()" class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Fisk/skaldjur
+              </label>
           </li>
         </ul>
       </div>
@@ -72,51 +92,46 @@
 
   <div class="col">
       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-        Val av protein
+        3. Val av protein
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-         <li>
-          <label onclick="" class="dropdown-option" class="form-check-label" for="Vegetariskt">
+        <label onclick="filterSeafood()" class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
             Vegetariskt
           </label>
         </li>
         <li>
-          <label onclick="" class="dropdown-option" class="form-check-label" for="Kyckling">
-            Kyckling
-          </label>
+          <label onclick="filterSeafood()" class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Kyckling
+            </label>
         </li>
         <li>
-          <label onclick="" class="dropdown-option" class="form-check-label" for="Fisk">
-            Fisk/skaldjur
-          </label>
+          <label onclick="filterSeafood()" class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Fisk/skaldjur
+            </label>
         </li>
         <li>
-          <label onclick="" class="dropdown-option" class="form-check-label" for="Beef">
-            Nötkött
-          </label>
+          <label onclick="filterSeafood()" class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Nötkött
+            </label>
         </li>
         <li>
-          <label onclick="" class="dropdown-option" class="form-check-label" for="Pork">
-            Fläsk
-          </label>
+          <label onclick="filterSeafood()" class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Fläsk
+            </label>
         </li>
       </ul>
     </div>
-    <div class="col">
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="prisKnapp" value="1" id="flexRadioDefault" checked>
-      <label class="form-check-label" for="flexRadioDefault1" style="color: black;">
-        Stigande pris
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="prisKnapp" value="2" id="flexRadioDefault">
-      <label class="form-check-label" for="flexRadioDefault2" style="color: black;">
-        Fallande pris
-      </label>
-      <button id="submit">Submit</button>
-    </div>
-  </div>
+
 <br />
 
 
