@@ -8,6 +8,7 @@
     <title>Lucky Duck!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+   
     
 </head>
 <body>
@@ -83,60 +84,52 @@
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
          <li>
-          <input class="form-check-input" type="checkbox" value="Vegetariskt" id="proteinCheck">
+          <input class="form-check-input" type="checkbox" value="Vegetarian" name="proteinCheck">
           <label class="form-check-label" for="Vegetariskt">
             Vegetariskt
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="checkbox" value="Kyckling" id="proteinCheck">
+          <input class="form-check-input" type="checkbox" value="Kyckling" name="proteinCheck">
           <label class="form-check-label" for="Kyckling">
             Kyckling
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="checkbox" value="Fisk" id="proteinCheck">
+          <input class="form-check-input" type="checkbox" value="Fisk" name="proteinCheck">
           <label class="form-check-label" for="Fisk">
             Fisk/skaldjur
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="checkbox" value="Beef" id="proteinCheck">
+          <input class="form-check-input" type="checkbox" value="Beef" name="proteinCheck">
           <label class="form-check-label" for="Beef">
             Nötkött
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="checkbox" value="Pork" id="proteinCheck">
+          <input class="form-check-input" type="checkbox" value="Pork" name="proteinCheck">
           <label class="form-check-label" for="Pork">
             Fläsk
           </label>
         </li>
       </ul>
     </div>
-
-
     <div class="col">
-      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-        Pris
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-         <li>
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Lägsta till högsta
-          </label>
-        </li>
-        <li>
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Högsta till lägsta
-          </label>
-      </ul>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="prisKnapp" value="1" id="flexRadioDefault" checked>
+      <label class="form-check-label" for="flexRadioDefault1">
+        Stigande pris
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="prisKnapp" value="2" id="flexRadioDefault">
+      <label class="form-check-label" for="flexRadioDefault2">
+        Fallande pris
+      </label>
+      <button id="submit">Submit</button>
     </div>
   </div>
-</div>
- 
 <br />
 
 

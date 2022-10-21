@@ -95,20 +95,63 @@ checkBox = document.getElementById('hightolow').addEventListener('click', event 
 });
 */ 
 
+document.getElementById('submit').onclick = function() {
+    var radios = document.getElementsByName("prisKnapp");
+    var selected = Array.from(radios).find(radio => radio.checked);
+    alert(selected.value);
+};
 
-var checkboxes = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
-let checked = []
 
 
-checkboxes.forEach(function(checkbox) {
+
+var checkboxes1 = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
+let checkedAllergi = []
+
+
+checkboxes1.forEach(function(checkbox) {
   checkbox.addEventListener('change', function() {
-    checked = 
-      Array.from(checkboxes) 
+    checkedAllergi = 
+      Array.from(checkboxes1) 
       .filter(i => i.checked)  
       .map(i => i.value) 
       
-    console.log("Dessa är ikryssade: ", checked)
+    console.log("Dessa allergier är valda: ", checkedAllergi)
   })
 });
 
+var checkboxes2 = document.querySelectorAll("input[type=checkbox][name=proteinCheck]");
+let checkedProtein = []
+
+
+checkboxes2.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    checkedProtein = 
+      Array.from(checkboxes2) 
+      .filter(i => i.checked)  
+      .map(i => i.value) 
+      
+    console.log("Dessa protein är valda: ", checkedProtein)
+  })
+});
+
+
+function getFilteredData ( proteinFilter, allergiFilter){
+    json = JSON.parse(object.json);
+    let filteredData = [];
+   for(let meatType in proteinItems){
+     for(let obj in json){
+        if (obj.meatType== item){
+      filteredData.add(obj);
+       } 
+     }
+    }
+   for(let allergi in allergiFilter){
+      for(let obj in filteredData){
+        if (!obj.allergier.includes(allergi)){
+      filteredData.remove(obj);
+       } 
+     }
+   }
+  return filteredData;
+} 
 
