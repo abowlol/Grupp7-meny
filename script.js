@@ -17,7 +17,7 @@ xhttp.send();
 // Created by @conmarap.*/
 
 
-
+//denna hämtar infon från submit knappen.
 
 document.getElementById('submit').onclick = function() {
     var radios = document.getElementsByName("prisKnapp");
