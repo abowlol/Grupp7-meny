@@ -10,7 +10,7 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "object.json", true);
 xhttp.send();
 
-
+//funktion för submit knapp för prissortering
 
 document.getElementById('submit').onclick = function() {
     var radios = document.getElementsByName("prisKnapp");
@@ -26,12 +26,13 @@ document.getElementById('submit').onclick = function() {
 
 const menuDiv = document.querySelector("#menu-container");
 
+//funktioner för allergier
 
 let OnOffSwitchForGluten = false;
 function filterGluten(){
 
     const glutenDivs = document.querySelectorAll('.gluten');
-    //console.log(glutenDivs);
+    
 
 
     if (OnOffSwitchForGluten === false) {
@@ -41,7 +42,7 @@ function filterGluten(){
             div.classList.toggle("glutenlocked");
             console.log(div);
             div.style.display = "none";
-            //console.log(div);
+            
 
         })
 
@@ -51,13 +52,12 @@ function filterGluten(){
 
         glutenDivs.forEach((div) => {
             
-            //numbers
+            
             div.classList.toggle("glutenlocked");
-            //-1
+            
             console.log(div);
             checkIfLockedAndReturnDisplay(div);
-            //if locked is found in any of the "div":s, keep display:none; else, display:block
-            //returnDisplay(div);
+            
             
         })
 
@@ -69,9 +69,7 @@ function filterGluten(){
 
 function checkIfLockedAndReturnDisplay (div){
 
-    /*Look inside this div. Is there a substring called "locked" in it? If there isn't
-    such a substring, you'll return -1, meaning it's not locked--meaning it's free
-    to appear (display:block).*/
+    
 
             const string = String(div.outerHTML);
             const locked = string.search('locked');
@@ -115,6 +113,44 @@ function filterLactose(){
 
 }
 
+
+let OnOffSwitchForEgg = false;
+function filterEgg(){
+
+    const eggDivs = document.querySelectorAll('.egg');
+
+
+    if (OnOffSwitchForEgg === false) {
+
+        eggDivs.forEach((div) => {
+
+            div.classList.toggle("egglocked");
+            div.style.display = "none";
+            console.log(div);
+            
+        })
+
+        OnOffSwitchForEgg = true;
+    }
+    else {
+
+        eggDivs.forEach((div) => {
+
+            div.classList.toggle("egglocked");
+            console.log(div);
+            checkIfLockedAndReturnDisplay(div);
+            
+        })
+
+        OnOffSwitchForEgg = false;
+
+    }
+
+}
+
+
+
+
 let OnOffSwitchForSeafood = false;
 function filterSeafood(){
 
@@ -148,6 +184,271 @@ function filterSeafood(){
     }
 
 }
+
+let OnOffSwitchForFishSeafood = false;
+function selectFishSeafood(){
+
+    const generalDivs = document.querySelectorAll('.mealCard');
+    
+
+    if (OnOffSwitchForFishSeafood === false) {
+
+        generalDivs.forEach((div) => {
+
+			const string = String(div.outerHTML);
+            const fishseafoodClass = string.search('fish/seafood');
+
+				if (fishseafoodClass === -1){
+		
+				
+				div.classList.add("generallocked");
+				console.log(div);
+				div.style.display = "none";
+			}
+            
+
+        })
+
+        OnOffSwitchForFishSeafood = true;
+    }
+    else {
+
+        generalDivs.forEach((div) => {
+            
+			const string = String(div.outerHTML);
+            const fishseafoodClass = string.search('fish/seafood');
+
+				if (fishseafoodClass === -1){
+		
+				
+				div.classList.remove("generallocked");
+				
+				console.log(div);
+				checkIfLockedAndReturnDisplay(div);
+
+			}
+				
+            
+        })
+
+        OnOffSwitchForFishSeafood = false;
+
+    }
+
+}
+
+let OnOffSwitchForBeef = false;
+function selectBeef(){
+
+    const generalDivs = document.querySelectorAll('.mealCard');
+    
+
+    if (OnOffSwitchForBeef === false) {
+
+        generalDivs.forEach((div) => {
+
+			const string = String(div.outerHTML);
+            const beefClass = string.search('beef');
+
+				if (beefClass === -1){
+		
+				
+				div.classList.add("generallocked");
+				console.log(div);
+				div.style.display = "none";
+			}
+            
+
+        })
+
+        OnOffSwitchForBeef = true;
+    }
+    else {
+
+        generalDivs.forEach((div) => {
+            
+			const string = String(div.outerHTML);
+            const beefClass = string.search('beef');
+
+				if (beefClass === -1){
+		
+				
+				div.classList.remove("generallocked");
+				
+				console.log(div);
+				checkIfLockedAndReturnDisplay(div);
+
+			}
+				
+            
+        })
+
+        OnOffSwitchForBeef = false;
+
+    }
+
+}
+
+let OnOffSwitchForPork = false;
+function selectPork(){
+
+    const generalDivs = document.querySelectorAll('.mealCard');
+    
+
+    if (OnOffSwitchForPork === false) {
+
+        generalDivs.forEach((div) => {
+
+			const string = String(div.outerHTML);
+            const porkClass = string.search('pork');
+
+				if (porkClass === -1){
+		
+				
+				div.classList.add("generallocked");
+				console.log(div);
+				div.style.display = "none";
+			}
+            
+
+        })
+
+        OnOffSwitchForPork = true;
+    }
+    else {
+
+        generalDivs.forEach((div) => {
+            
+			const string = String(div.outerHTML);
+            const porkClass = string.search('pork');
+
+				if (porkClass === -1){
+		
+				
+				div.classList.remove("generallocked");
+				console.log(div);
+				checkIfLockedAndReturnDisplay(div);
+
+			}
+				
+            
+        })
+
+        OnOffSwitchForPork = false;
+
+    }
+
+}
+
+let OnOffSwitchForChicken = false;
+function selectChicken(){
+
+    const generalDivs = document.querySelectorAll('.mealCard');
+    
+
+    if (OnOffSwitchForChicken === false) {
+
+        generalDivs.forEach((div) => {
+
+			const string = String(div.outerHTML);
+            const chickenClass = string.search('chicken');
+
+				if (chickenClass === -1){
+		
+				
+				div.classList.add("generallocked");
+				console.log(div);
+				div.style.display = "none";
+			}
+           
+
+        })
+
+        OnOffSwitchForChicken = true;
+    }
+    else {
+
+        generalDivs.forEach((div) => {
+            
+			const string = String(div.outerHTML);
+            const chickenClass = string.search('chicken');
+
+				if (chickenClass === -1){
+		
+				
+				div.classList.remove("generallocked");
+				
+				console.log(div);
+				checkIfLockedAndReturnDisplay(div);
+
+			}
+				
+            
+        })
+
+        OnOffSwitchForChicken = false;
+
+    }
+
+}
+
+
+let OnOffSwitchForVegetarian = false;
+function selectVegetarian(){
+
+    const generalDivs = document.querySelectorAll('.mealCard');
+    
+
+    if (OnOffSwitchForVegetarian === false) {
+
+        generalDivs.forEach((div) => {
+
+			const string = String(div.outerHTML);
+            const vegetarianClass = string.search('vegetarian');
+
+				if (vegetarianClass === -1){
+		
+				
+				div.classList.add("generallocked");
+				console.log(div);
+				div.style.display = "none";
+			}
+            
+
+        })
+
+        OnOffSwitchForVegetarian = true;
+    }
+    else {
+
+        generalDivs.forEach((div) => {
+            
+			const string = String(div.outerHTML);
+            const vegetarianClass = string.search('vegetarian');
+
+				if (vegetarianClass === -1){
+		
+				
+				div.classList.remove("generallocked");
+				
+				console.log(div);
+				checkIfLockedAndReturnDisplay(div);
+
+			}
+				
+            
+        })
+
+        OnOffSwitchForVegetarian = false;
+
+    }
+
+}
+
+
+
+
+//filter för prissortering
 
 function SortAscending(){
         var xhttp = new XMLHttpRequest();
@@ -198,7 +499,7 @@ function SortDescending(){
             }
         }
 
-
+//funktion för att printa kort
 
         function printMenu(menu)
         {         
@@ -232,4 +533,3 @@ function SortDescending(){
 
             }
         }
-
