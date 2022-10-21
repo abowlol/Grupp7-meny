@@ -1,4 +1,4 @@
-/*var xhttp = new XMLHttpRequest();
+var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var menu = JSON.parse(xhttp.responseText);
@@ -28,7 +28,7 @@ document.getElementById('submit').onclick = function() {
 
 
 
-/* var checkboxes1 = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
+var checkboxes1 = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
 let checkedAllergi = []
 
 
@@ -60,6 +60,10 @@ checkboxes2.forEach(function(checkbox) {
 
 
 function getFilteredData ( proteinFilter, allergiFilter){
+  var xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'object.json')
+        xhttp.onload = function(){
+        var menu = JSON.parse(xhttp.responseText);
     json = JSON.parse(object.json);
     let filteredData = [];
    for(let meatType in proteinItems){
@@ -69,7 +73,7 @@ function getFilteredData ( proteinFilter, allergiFilter){
        } 
      }
     }
-   for(let allergi in allergiFilter){
+   for(let alergies in allergiFilter){
       for(let obj in filteredData){
         if (!obj.allergier.includes(allergi)){
       filteredData.remove(obj);
@@ -78,4 +82,4 @@ function getFilteredData ( proteinFilter, allergiFilter){
    }
   return filteredData;
 } 
-*/
+}
