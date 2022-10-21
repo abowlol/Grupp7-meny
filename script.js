@@ -17,83 +17,7 @@ xhttp.send();
 // Created by @conmarap.*/
 
 
-/*allergier
-checkBox = document.getElementById('Laktos').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
 
-checkBox = document.getElementById('Egg').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Gluten').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Skaldjur').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Notter').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-//protein
-
-checkBox = document.getElementById('Vegetariskt').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Kyckling').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Fisk').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Beef').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('Pork').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-//pris
-
-checkBox = document.getElementById('lowtohigh').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-
-checkBox = document.getElementById('hightolow').addEventListener('click', event => {
-	if(event.target.checked) {
-		alert("Checkbox checked!");
-	}
-});
-*/ 
 
 document.getElementById('submit').onclick = function() {
     var radios = document.getElementsByName("prisKnapp");
@@ -104,7 +28,7 @@ document.getElementById('submit').onclick = function() {
 
 
 
-var checkboxes1 = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
+/* var checkboxes1 = document.querySelectorAll("input[type=checkbox][name=allergiCheck]");
 let checkedAllergi = []
 
 
@@ -154,4 +78,4 @@ function getFilteredData ( proteinFilter, allergiFilter){
    }
   return filteredData;
 } 
-
+*/
